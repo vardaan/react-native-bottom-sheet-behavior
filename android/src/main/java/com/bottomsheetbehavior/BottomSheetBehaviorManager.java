@@ -169,6 +169,8 @@ public class BottomSheetBehaviorManager extends ViewGroupManager<BottomSheetBeha
 
         @Override
         public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+            if(Float.isNaN())
+                return;
             WritableMap event = Arguments.createMap();
             event.putDouble("offset", slideOffset);
             ReactContext reactContext = (ReactContext) bottomSheet.getContext();
