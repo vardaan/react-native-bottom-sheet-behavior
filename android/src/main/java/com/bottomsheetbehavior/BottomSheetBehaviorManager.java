@@ -169,7 +169,7 @@ public class BottomSheetBehaviorManager extends ViewGroupManager<BottomSheetBeha
 
         @Override
         public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-            if(Float.isNaN())
+            if(Double.isNaN(slideOffset))
                 return;
             WritableMap event = Arguments.createMap();
             event.putDouble("offset", slideOffset);
